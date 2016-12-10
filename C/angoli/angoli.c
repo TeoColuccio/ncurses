@@ -15,9 +15,9 @@ int main()
   getmaxyx(stdscr, r, c);
 
   mvaddstr(0, 0, "*");
-  mvaddstr(r, 0, "*");
-  mvaddstr(0, c, "*");
-  mvaddstr(r, c, "*");
+  mvaddstr(r - 1, 0, "*");
+  mvaddstr(0, c - 1, "*");
+  mvaddstr(r - 1, c - 1, "*");
 
   refresh();
   getch();
