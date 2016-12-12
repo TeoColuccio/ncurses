@@ -1,9 +1,10 @@
-CFLAGS=-Wall -ansi -pedantic
+CFLAGS=-Wall -ansi
 LDFLAGS=-lncurses
 
-quadrati: quadrati.o
-quadrati.o: quadrati.c
+quadrati: main.o quadrati.o 
+	gcc main.o quadrati.o -o quadrati
 
-.PHONY: clean
+main.o:main.c
+quadrati.o:quadrati.c
 clean:
 	rm -f *.o quadrati
