@@ -1,9 +1,10 @@
-CFLAGS=-Wall -ansi -pedantic
+CFLAGS=-Wall -ansi
 LDFLAGS=-lncurses
 
-scacchiera: scacchiera.o
-scacchiera.o: scacchiera.c
+quadrati: main.o scacchiera.o 
+	gcc main.o scacchiera.o -o scacchiera
 
-.PHONY: clean
+main.o:main.c
+scacchiera.o:scacchiera.c
 clean:
 	rm -f *.o scacchiera
