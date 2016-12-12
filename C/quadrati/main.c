@@ -16,8 +16,12 @@ int main()
    * infatti nel primo parametro bisogna proprio specificare il colore
    * 1 o 2 
    */
+  
   drow_init();
+  
   drow_square(1, 12, 13, c, r);
+  drow_square(2, 12, 13, c + 25, r + 5);
+
   drow_end(); 
   
   return 0;

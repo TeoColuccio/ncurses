@@ -20,10 +20,12 @@ void drow_square(int colore, int altezza, int larghezza, int colonna_iniziale, i
   init_pair(1, COLOR_BLACK, COLOR_WHITE);
   init_pair(2, COLOR_BLACK, COLOR_GREEN);  
   
-  int i = 0, conta = 0;
+  int i = 0, conta = 0, temp = colonna_iniziale;
 
   attron(COLOR_PAIR(colore)); 
   while (i < altezza) {
+    conta = 0;
+    colonna_iniziale = temp; 
     while (conta < larghezza) {
       mvaddstr(riga_iniziale, colonna_iniziale, " ");
       colonna_iniziale++;
