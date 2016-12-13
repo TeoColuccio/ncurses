@@ -17,12 +17,12 @@ int main()
    * 1 o 2 
    */
   
-  drow_init();
+  draw_init();
   
-  drow_square(1, 12, 13, c, r);
-  drow_square(2, 12, 13, c + 25, r + 5);
+  draw_square(1, 12, 13, c, r);
+  draw_square(2, 12, 13, c + 25, r + 5);
 
-  drow_end(); 
+  draw_end(); 
   
   return 0;
 }

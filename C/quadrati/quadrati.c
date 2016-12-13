@@ -1,7 +1,7 @@
 #include <ncurses.h>
 #include "quadrati.h"
 
-void drow_init()
+void draw_init()
 {
   initscr();
   curs_set(0);
@@ -13,7 +13,7 @@ void drow_init()
   }
 }
 
-void drow_square(int colore, int altezza, int larghezza, int colonna_iniziale, int riga_iniziale) 
+void draw_square(int colore, int altezza, int larghezza, int colonna_iniziale, int riga_iniziale) 
 { 
   start_color();
 
@@ -37,7 +37,7 @@ void drow_square(int colore, int altezza, int larghezza, int colonna_iniziale, i
   attroff(COLOR_PAIR(colore));
 }
 
-void drow_end()
+void draw_end()
 { 
   refresh();
   getch();
