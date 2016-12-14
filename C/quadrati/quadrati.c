@@ -3,21 +3,18 @@
 
 void draw_init()
 {
+  if (!has_colors()) {
+    endwin();
+    printf("Il terminale non riesce a gestire i colori\n");
+    exit(1);
+  }
+  
   initscr();
   curs_set(0);
 
   start_color();
   init_pair(1, COLOR_BLACK, COLOR_WHITE);
   init_pair(2, COLOR_BLACK, COLOR_GREEN);  
-}
-
-void draw_color_control()
-{
-  if (!has_colors()) {
-    endwin();
-    printf("Il terminale non riesce a gestire i colori\n");
-    exit(1);
-  }
 }
 
 void draw_square(int colore, int altezza, int larghezza, int colonna_iniziale, int riga_iniziale) 

@@ -17,8 +17,6 @@ int main()
    * 1 o 2 
    */
 
-  draw_color_control();
-  
   draw_init();
 
   draw_square(1, 12, 13, c, r);
