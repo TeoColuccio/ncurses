@@ -16,10 +16,10 @@ int main()
    * infatti nel primo parametro bisogna proprio specificare il colore
    * 1 o 2 
    */
+
+  draw_color_control();
   
   draw_init();
-  
-  draw_color_control();
 
   draw_square(1, 12, 13, c, r);
   draw_square(2, 12, 13, c + 25, r + 5);
