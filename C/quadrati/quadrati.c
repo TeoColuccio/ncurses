@@ -5,6 +5,10 @@ void draw_init()
 {
   initscr();
   curs_set(0);
+
+  start_color();
+  init_pair(1, COLOR_BLACK, COLOR_WHITE);
+  init_pair(2, COLOR_BLACK, COLOR_GREEN);  
 }
 
 void draw_color_control()
@@ -14,14 +18,10 @@ void draw_color_control()
     printf("Il terminale non riesce a gestire i colori\n");
     exit(1);
   }
-  start_color();
 }
 
 void draw_square(int colore, int altezza, int larghezza, int colonna_iniziale, int riga_iniziale) 
 { 
-  init_pair(1, COLOR_BLACK, COLOR_WHITE);
-  init_pair(2, COLOR_BLACK, COLOR_GREEN);  
-  
   int i = 0, conta = 0, temp = colonna_iniziale;
 
   attron(COLOR_PAIR(colore)); 
