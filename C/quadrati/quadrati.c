@@ -7,6 +7,7 @@ void draw_init()
   curs_set(0);
 
   if(!has_colors()) {
+    endwin();
     printf("Il terminale non riesce a gestire i colori\n");
     exit(1);
   }
