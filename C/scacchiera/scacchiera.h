@@ -1,10 +1,8 @@
 #ifndef SCACCHIERA_H
 #define SCACCHIERA_H
 
-
-void scacchiera_init();
-void scacchiera_drow(int larghezza, int colonne_scacchiera, int riga_iniziale, int numero_quadrati, int altezza_quadrati); 
-int scambio_colore(int color);
-void scacchiera_end();
+void draw_init();
+void draw_square(int colore, int altezza, int larghezza, int colonna_iniziale, int riga_iniziale);
+void draw_end();
 
 #endif
