@@ -1,10 +1,10 @@
 CFLAGS=-Wall -ansi
 LDFLAGS=-lncurses
 
-quadrati: main.o quadrati.o 
-	gcc main.o quadrati.o -o quadrati
+scacchiera: main.o scacchiera.o 
+	gcc main.o scacchiera.o -o scacchiera
 
 main.o:main.c
-quadrati.o:quadrati.c
+scacchiera.o:scacchiera.c
 clean:
-	rm -f *.o quadrati
+	rm -f *.o scacchiera
