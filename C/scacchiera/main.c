@@ -17,8 +17,7 @@ int main()
 
   draw_init();
 
-  /*draw_chessboard(altezza_quadrato, larghezza_quadrato, colonna_iniziale, riga_iniziale);*/
-  draw_four_square(altezza_quadrato, larghezza_quadrato, colonna_iniziale, riga_iniziale);
+  draw_chessboard(altezza_quadrato, larghezza_quadrato, colonna_iniziale, riga_iniziale);
 
   draw_end();
 
