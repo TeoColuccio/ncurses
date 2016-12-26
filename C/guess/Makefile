@@ -1,9 +1,11 @@
-CFLAGS=-Wall -ansi -pedantic
+CFLAGS=-Wall -ansi
+LDFLAGS=-lncurses
 
-es5_35: es5_35.o random.o guess.o
+scacchiera: main.o guess.o random.o
 
-es5_35.o: es5_35.c guess.h
-
-guess.o: guess.c guess.h random.h
-
+main.o: main.c
+guess.o: guess.c guess.h 
 random.o: random.c random.h
+
+clean:
+	rm -f *.o scacchiera
