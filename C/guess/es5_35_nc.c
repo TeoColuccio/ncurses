@@ -33,6 +33,8 @@ int main()
     
     do {
       mvprintw(9, 2, "? ");
+      while ((guess = getch() != '\n')) 
+        ;
       scanw("%d\n", &guess);
     } while (guess_check(numero, guess)!=0);
     
