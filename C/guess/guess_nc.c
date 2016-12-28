@@ -25,7 +25,7 @@ void guess_stampa_intestazione_nc()
   attroff(A_BOLD);
 }
 
-int guess_check_nc(int number, int guess)
+char* guess_check_nc(int number, int guess)
 {
   printw("%s\n", guess_check(number, guess));
 }
