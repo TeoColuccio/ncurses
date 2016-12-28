@@ -18,12 +18,10 @@ int guess_number(int min, int max)
   return random_between(min, max+1);
 }
 
-void guess_stampa_intestazione()
+void guess_stampa_intestazione_nc()
 {
   attron(A_BOLD);
-  mvprintw(2, 2, "I have a number between 1 and 1000.\n"
-      "  Can you guess my number?\n"
-      "  Please type the first guess.\n");
+  printw("%s\n", guess_stampa_intestazione());
   attroff(A_BOLD);
 }
 

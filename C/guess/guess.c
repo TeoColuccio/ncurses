@@ -12,11 +12,11 @@ int guess_number(int min, int max)
   return random_between(min, max+1);
 }
 
-void guess_stampa_intestazione()
+char* guess_stampa_intestazione()
 {
-  printf("\n\nI have a number between 1 and 1000.\n"
+  return "\n\nI have a number between 1 and 1000.\n"
       "Can you guess my number?\n"
-      "Please type the first guess.\n");
+      "Please type the first guess.\n"
 }
 
 int guess_check(int number, int guess)
