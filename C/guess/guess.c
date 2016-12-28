@@ -16,19 +16,17 @@ char* guess_stampa_intestazione()
 {
   return "\n\nI have a number between 1 and 1000.\n"
       "Can you guess my number?\n"
-      "Please type the first guess.\n"
+      "Please type the first guess.\n";
 }
 
-int guess_check(int number, int guess)
+char* guess_check(int number, int guess)
 {
   if (number==guess) {
-    printf("Excellent! You guess the number!\n"
-        "Would you like to play again (y or n)? ");
+    return "Excellent! You guess the number!\n"
+        "Would you like to play again (y or n)? ";
   } else if (number<guess) {
-    printf("Too high. Try again.\n");
+    return "Too high. Try again.\n";
   } else {
-    printf("Too low. Try again.\n");
+    return "Too low. Try again.\n";
   }
-  
-  return guess-number;
 }

@@ -36,7 +36,8 @@ int main()
       while ((guess = getch() != '\n')) 
         ;
       scanw("%d\n", &guess);
-    } while (guess_check(numero, guess)!=0);
+      guess_check_nc(numero, guess);
+    } while (guess != numero);
     
     /* clear the buffer */
     while ((ans=getchar()) != '\n')

@@ -25,19 +25,9 @@ void guess_stampa_intestazione_nc()
   attroff(A_BOLD);
 }
 
-int guess_check(int number, int guess)
+int guess_check_nc(int number, int guess)
 {
-  move(16, 2);
-  if (number==guess) {
-    printw("Either you know the secret or you got lucky!\n\n"
-        "Would you like to play again (y or n)? ");
-  } else if (number<guess) {
-    printw("Too high. Try again.\n");
-  } else {
-    printw("Too low. Try again.\n");
-  }
-  
-  return guess-number;
+  printw("%s\n", guess_check(number, guess));
 }
 
 void guess_end()
