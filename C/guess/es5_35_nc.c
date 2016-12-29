@@ -5,8 +5,7 @@
 /* Indovina il numero */
 
 #include <stdio.h>    /* ? */
-/* dov'e' guess_nc? */
-#include "guess.h"
+#include "guess_nc.h"
 
 int main()
 {

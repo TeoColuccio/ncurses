@@ -2,7 +2,6 @@
 #include <ncurses.h>
 
 #include "guess.h"
-#include "random.h"
 
 void guess_init()
 {
@@ -10,15 +9,7 @@ void guess_init()
   curs_set(1);
   echo();
 
-  /* perché richiami una funzione del modulo random?
-    Hai il modulo guess a disposizione */
-  random_init();
-}
-
-/* questa non serve, gia' ne abbiamo una in guess */
-int guess_number(int min, int max)
-{
-  return random_between(min, max+1);
+  guess_init();
 }
 
 void guess_stampa_intestazione_nc()
