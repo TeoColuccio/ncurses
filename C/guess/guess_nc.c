@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <stdio.h>      /* NO! */
 #include <ncurses.h>
 
 #include "guess.h"
@@ -27,6 +27,6 @@ char* guess_check_nc(int number, int guess)
 void guess_end()
 {
   refresh();
-  getch();
+  getch();          /* questo dara' fastidio */
   endwin();
 }
