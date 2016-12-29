@@ -4,11 +4,12 @@
 
 /* Indovina il numero */
 
-#include <stdio.h>
+#include <stdio.h>    /* ? */
+/* dov'e' guess_nc? */
 #include "guess.h"
 
 int main()
-{  
+{
   int numero;
   int guess;
   int ans = 'y';
@@ -30,23 +31,23 @@ int main()
      * altrimenti l'intestazione non sara' coerente
      */
     numero = guess_number(1, 4);
-    
+
     do {
       mvprintw(9, 2, "? ");
-      while ((guess = getch() != '\n')) 
-        ;
+      while ((guess = getch() != '\n'))       /* devi aggiustare tutti questi input */
+        ;                                     /* ora hai a disposizione le ncurses */
       scanw("%d\n", &guess);
       guess_check_nc(numero, guess);
     } while (guess != numero);
-    
-    /* clear the buffer */
+
+    /* clear the buffer */                     /* anche qui */
     while ((ans=getchar()) != '\n')
       ;
-    /* read the answer */
+    /* read the answer */                      /* e qui */
     ans = getchar();
-    
+
   } while (ans=='y');
- 
+
   guess_end();
 
   return 0;

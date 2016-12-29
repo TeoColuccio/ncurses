@@ -1,10 +1,7 @@
 #ifndef GUESS_H
 #define GUESS_H
 
-/* guess: indovina il numero
- *
- * versione 1
- */
+/* guess: indovina il numero */
 
 void guess_init();
 int guess_number(int min, int max);
