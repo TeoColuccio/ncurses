@@ -5,9 +5,9 @@
 
 /* i nomi delle funzioni!!! */
 
-void guess_init();
-void guess_stampa_intestazione_nc();
-char* guess_check_nc(int number, int guess);
-void guess_end();
+void guess_nc_init();
+void guess_nc_stampa_intestazione();
+char* guess_nc_check(int number, int guess);
+void guess_nc_end();
 
 #endif
