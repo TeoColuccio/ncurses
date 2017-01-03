@@ -40,10 +40,10 @@ int main()
     } while (guess != numero);
 
     /* clear the buffer */                     /* anche qui */
-    while ((ans=getchar()) != '\n')
+    while ((ans=getch()) != '\n')
       ;
     /* read the answer */                      /* e qui */
-    ans = getchar();
+    ans = getch();
 
   } while (ans=='y');
 
