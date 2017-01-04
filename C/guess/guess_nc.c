@@ -11,14 +11,14 @@ void guess_nc_init()
   guess_init();
 }
 
-void guess_nc_stampa_intestazione_nc()
+void guess_nc_stampa_intestazione()
 {
   attron(A_BOLD);
   printw("%s\n", guess_stampa_intestazione());
   attroff(A_BOLD);
 }
 
-char* guess_nc_check_nc(int number, int guess)
+char* guess_nc_check(int number, int guess)
 {
   printw("%s\n", guess_check(number, guess));
 }
