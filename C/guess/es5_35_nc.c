@@ -33,15 +33,10 @@ int main()
 
     do {
       mvprintw(9, 2, "? ");
-      while ((guess = getch() != '\n'))       /* devi aggiustare tutti questi input */
-        ;                                     /* ora hai a disposizione le ncurses */
       scanw("%d\n", &guess);
       guess_check_nc(numero, guess);
     } while (guess != numero);
 
-    /* clear the buffer */                     /* anche qui */
-    while ((ans=getch()) != '\n')
-      ;
     /* read the answer */                      /* e qui */
     ans = getch();
 
