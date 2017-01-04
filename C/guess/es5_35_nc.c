@@ -4,7 +4,6 @@
 
 /* Indovina il numero */
 
-#include <stdio.h>    /* ? */
 #include "guess_nc.h"
 
 int main()
