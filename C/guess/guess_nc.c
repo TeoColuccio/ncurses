@@ -1,5 +1,6 @@
 #include <ncurses.h>
 
+#include "guess_nc.h"
 #include "guess.h"
 
 void guess_nc_init()

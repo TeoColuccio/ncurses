@@ -13,7 +13,7 @@ int main()
   int guess;
   int ans = 'y';
 
-  guess_init();
+  guess_nc_init();
 
   do {
     /* bug
@@ -22,7 +22,7 @@ int main()
      * accetta minimo e massimo tra cui indovinare
      * e stampa sempre 1 e 1000
      */
-    guess_stampa_intestazione();
+    guess_nc_stampa_intestazione();
 
     /* nota:
      *
@@ -34,7 +34,7 @@ int main()
     do {
       mvprintw(9, 2, "? ");
       scanw("%d\n", &guess);
-      guess_check_nc(numero, guess);
+      guess_nc_check(numero, guess);
     } while (guess != numero);
 
     /* read the answer */                      /* e qui */
@@ -42,7 +42,7 @@ int main()
 
   } while (ans=='y');
 
-  guess_end();
+  guess_nc_end();
 
   return 0;
 }

@@ -3,8 +3,6 @@
 
 /* guess: indovina il numero */
 
-/* i nomi delle funzioni!!! */
-
 void guess_nc_init();
 void guess_nc_stampa_intestazione();
 char* guess_nc_check(int number, int guess);
