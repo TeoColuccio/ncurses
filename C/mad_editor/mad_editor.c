@@ -6,6 +6,7 @@
 void mad_init()
 {
   initscr();
+  noecho();
   curs_set(0);
   keypad(stdscr, TRUE);
 }
@@ -32,7 +33,36 @@ void mad_stampa_intestazione()
 void mad_stampa_carattere(int c)
 {
   int attr, rows = mad_getmax_rows(), cols = mad_getmax_cols();  
-  mvprintw(random_between(0, rows), random_between(0, cols), "%c", c);
+  
+  attr = random_between(0, 3);
+  
+  switch (attr) {
+    case 0: 
+      attron(A_UNDERLINE);
+      mvprintw(random_between(0, rows), random_between(0, cols), "%c", c);
+      attroff(A_UNDERLINE);
+      break;
+    case 1:
+      attron(A_BOLD);
+      mvprintw(random_between(0, rows), random_between(0, cols), "%c", c);
+      attroff(A_BOLD);
+      break; 
+    case 2:
+      attron(A_STANDOUT);
+      mvprintw(random_between(0, rows), random_between(0, cols), "%c", c);
+      attroff(A_STANDOUT);
+      break;
+  } 
+}
+
+void mad_stampa_carattere_ciclo()
+{ 
+  int c, car;
+
+  while ((car = getch()) != KEY_F(2)) {
+    c = getch();
+    mad_stampa_carattere(c);
+  }
 }
 
 void mad_end()
