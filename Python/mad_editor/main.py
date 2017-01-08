@@ -7,11 +7,11 @@
 
 from mad_editor import *
   
-  mad_init()
+mad_init()
 
-  mad_stampa_intestazione()
+mad_stampa_intestazione()
 
-  mad_stampa_carattere_ciclo()
+mad_stampa_carattere_ciclo()
  
-  mad_end()
+mad_end()
 

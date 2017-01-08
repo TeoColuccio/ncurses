@@ -62,6 +62,7 @@ void mad_stampa_carattere_ciclo()
   while ((car = getch()) != KEY_F(2)) {
     c = getch();
     mad_stampa_carattere(c);
+    refresh();
   }
 }
 

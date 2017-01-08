@@ -28,7 +28,7 @@ def mad_stampa_carattere(c):
         stdscr.attroff(A_STANDOUT)
 
 def mad_stampa_carattere_ciclo():
-    while car == stdscr.getch() != KEY_F(2) 
+    while (car == stdscr.getch()) != KEY_F(2):
         c = stdscr.getch()
         mad_stampa_carattere(c)
     
