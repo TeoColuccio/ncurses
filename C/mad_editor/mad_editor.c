@@ -57,12 +57,11 @@ void mad_stampa_carattere(int c)
 
 void mad_stampa_carattere_ciclo()
 { 
-  int c, car;
+  int i = 0, c, car;
 
-  while ((car = getch()) != KEY_F(2)) {
-    c = getch();
+  while ((c = getch()) != KEY_F(2)) {
     mad_stampa_carattere(c);
-    refresh();
+    refresh(); /* Questo serve o non serve?? */
   }
 }
 
