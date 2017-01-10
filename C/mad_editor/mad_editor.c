@@ -57,7 +57,7 @@ void mad_stampa_carattere(int c)
 
 void mad_stampa_carattere_ciclo()
 { 
-  int i = 0, c, car;
+  int c;
 
   while ((c = getch()) != KEY_F(2)) {
     mad_stampa_carattere(c);
