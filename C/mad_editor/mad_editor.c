@@ -67,7 +67,6 @@ void mad_stampa_carattere_ciclo()
 
 void mad_end()
 {
-  refresh;
-  getch();
+  refresh();
   endwin();
 }
