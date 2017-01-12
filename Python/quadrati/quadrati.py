@@ -1,9 +1,8 @@
 import curses
 
 def init_color():
-    curses.init_pair(1, curses.COLOR_BLACK, curses.COLOR_WHITE)
-    curses.init_pair(2, curses.COLOR_BLACK, curses.COLOR_GREEN)
-    curses.init_pair(3, curses.COLOR_BLACK, curses.COLOR_BLUE)
+    curses.init_pair(1, curses.COLOR_BLACK, curses.COLOR_GREEN)
+    curses.init_pair(2, curses.COLOR_BLACK, curses.COLOR_BLUE)
 
 def stampa_intestazione(stdscr):
     stdscr.addstr(3, 3, "Disegna Quadrati")
