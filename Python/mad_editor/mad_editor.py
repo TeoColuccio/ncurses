@@ -16,22 +16,16 @@ def mad_stampa_carattere(stdscr, c):
     attr = random.randrange(0, 3)
   
     if attr == 0:
-        stdscr.attron(A_UNDERLINE)
-        stdscr.addstr(random.randrange(0, rows), random.randrange(0, cols), chr(c))
-        stdscr.attroff(A_UNDERLINE)
+        stdscr.addstr(random.randrange(0, rows), random.randrange(0, cols), chr(c), curses.A_UNDERLINE)
     elif attr ==  1:
-        stdscr.attron(A_BOLD)
-        stdscr.addstr(random.randrange(0, rows), random.randrange(0, cols), chr(c))
-        stdscr.attroff(A_BOLD)
+        stdscr.addstr(random.randrange(0, rows), random.randrange(0, cols), chr(c), curses.A_BOLD)
     elif attr == 2:
-        stdscr.attron(A_STANDOUT)
-        stdscr.addstr(random.randrange(0, rows), random.randrange(0, cols), chr(c))
-        stdscr.attroff(A_STANDOUT)
+        stdscr.addstr(random.randrange(0, rows), random.randrange(0, cols), chr(c), curses.A_STANDOUT)
 
 def mad_stampa_carattere_ciclo(stdscr):
     c = stdscr.getch()
-    while c != stdscr.KEY_F(2):
-        c = stdsrc.getch()
+    while c != curses.KEY_F2:
+        c = stdscr.getch()
         mad_stampa_carattere(stdscr, c)
     
 def mad_end(stdscr):
