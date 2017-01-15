@@ -20,11 +20,8 @@ def draw_square(stdscr, color):
     altezza = 9
     larghezza = 11
     temp = colonna_iniziale
-     
-    if color == 'a':
-        num_colore = 1
-    elif color == 'b':
-        num_colore = 2
+        
+    num_colore = color - 96
 
     while i < larghezza:
         conta = 0

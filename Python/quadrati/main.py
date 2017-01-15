@@ -20,9 +20,9 @@ curses.start_color()
 init_color()
 stampa_intestazione(stdscr)
 
-#color = stdscr.getch()
- 
-draw_square(stdscr, 'b')
+color = stdscr.getch()
+
+draw_square(stdscr, color)
 
 stdscr.refresh()
 stdscr.getch()
