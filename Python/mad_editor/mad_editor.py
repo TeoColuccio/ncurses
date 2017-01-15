@@ -25,10 +25,9 @@ def mad_stampa_carattere(stdscr, c):
 def mad_stampa_carattere_ciclo(stdscr):
     c = stdscr.getch()
     while c != curses.KEY_F2:
-        c = stdscr.getch()
         mad_stampa_carattere(stdscr, c)
-    
+        c = stdscr.getch() 
+
 def mad_end(stdscr):
     stdscr.refresh()
-    stdscr.getch()
-    stdscr.endwin()
+    curses.endwin()
