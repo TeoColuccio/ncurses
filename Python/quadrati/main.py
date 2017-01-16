@@ -20,14 +20,11 @@ curses.start_color()
 init_color()
 stampa_intestazione(stdscr)
 
-# fai una sola stampa, poi piu' niente???
-# il programma deve continuare finche' non 
-# si preme e
 color = stdscr.getch()
-
-draw_square(stdscr, color)
+while color != ord('e'):
+    draw_square_colored(stdscr, color)
+    color = stdscr.getch()
 
 stdscr.refresh()
-stdscr.getch()
 
 curses.endwin()

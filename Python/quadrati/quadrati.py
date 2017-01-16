@@ -12,7 +12,6 @@ def stampa_intestazione(stdscr):
     stdscr.addstr(9, 3, "e - termina il programma")
 
 def draw_square(stdscr, color):
-    num_colore = 0
     i = 0 
     conta = 0 
     colonna_iniziale = 13 
@@ -21,23 +20,23 @@ def draw_square(stdscr, color):
     larghezza = 11
     temp = colonna_iniziale
         
-    #num_colore = color - 96
-    # meglio una bella if, e' piu'
-    # chiara e permette modifiche ai colori
-    # nota la funzione ord() che
-    # restiruisce il codice corrispondente al carattere
+    while i < larghezza:
+        conta = 0
+        colonna_iniziale = temp 
+        while conta < altezza:
+            stdscr.addstr(colonna_iniziale, riga_iniziale, " ", curses.color_pair(color))
+            colonna_iniziale = colonna_iniziale + 1
+            conta = conta + 1
+        riga_iniziale = riga_iniziale + 1
+        i = i + 1
+
+def draw_square_colored(stdscr, color):
+    num_colore = 0
+
     if color == ord('a'):
         num_colore = 1
     elif color == ord('b'):
         num_colore = 2
 
-    # non avevi una funzione per la stampa dei quadrati una volta?
-    while i < larghezza:
-        conta = 0
-        colonna_iniziale = temp 
-        while conta < altezza:
-            stdscr.addstr(colonna_iniziale, riga_iniziale, " ", curses.color_pair(num_colore))
-            colonna_iniziale = colonna_iniziale + 1
-            conta = conta + 1
-        riga_iniziale = riga_iniziale + 1
-        i = i + 1
+    draw_square(stdscr, num_colore)
+
