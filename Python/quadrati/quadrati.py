@@ -21,8 +21,17 @@ def draw_square(stdscr, color):
     larghezza = 11
     temp = colonna_iniziale
         
-    num_colore = color - 96
+    #num_colore = color - 96
+    # meglio una bella if, e' piu'
+    # chiara e permette modifiche ai colori
+    # nota la funzione ord() che
+    # restiruisce il codice corrispondente al carattere
+    if color == ord('a'):
+        num_colore = 1
+    elif color == ord('b'):
+        num_colore = 2
 
+    # non avevi una funzione per la stampa dei quadrati una volta?
     while i < larghezza:
         conta = 0
         colonna_iniziale = temp 
