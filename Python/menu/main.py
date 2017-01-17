@@ -9,8 +9,12 @@ curses.noecho()
 
 menu_intestazione(stdscr)
 
+scelta = stdscr.getch()
+while scelta != ord('3'):
+    menu_scelta(stdscr, scelta)
+    scelta = stdscr.getch()
+
 stdscr.refresh()
-stdscr.getch()
 
 curses.endwin()
 
