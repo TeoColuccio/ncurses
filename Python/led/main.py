@@ -12,9 +12,14 @@ if not curses.has_colors():
 curses.start_color()
 
 led_init_colori()
+
 led_intestazione(stdscr)
 
+scelta = stdscr.getch()
+while scelta != ord('e'):
+    led_on(stdscr, scelta)
+    scelta = stdscr.getch()
+
 stdscr.refresh()
-stdscr.getch()
 
 curses.endwin()
