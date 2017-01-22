@@ -15,7 +15,7 @@ def led_stampa_carattere(stdscr, ROW, COL):
 def led_intestazione(stdscr):
     i = 0
     row = 0
-    stdscr.addstr(4, 7, "+-----+-----+-----+") 
+    stdscr.addstr(4, 7, "+-----+-----+-----+")
     stdscr.addstr(5, 7, "|     |     |     GND")
     stdscr.addstr(6, 47, "Led: Simulatore di Led", curses.A_BOLD)
     stdscr.addstr(6, 7, " ", curses.color_pair(1))
@@ -24,7 +24,7 @@ def led_intestazione(stdscr):
     stdscr.addstr(7, 7, " ", curses.color_pair(1))
     stdscr.addstr(7, 13, " ", curses.color_pair(1))
     stdscr.addstr(7, 19, " ", curses.color_pair(1))
-   
+
     row = 8
     while i < 2:
         led_stampa_carattere(stdscr, row, 7)
@@ -47,16 +47,38 @@ def led_intestazione(stdscr):
     stdscr.addstr(10, 56, "blu", curses.color_pair(7))
     stdscr.addstr(12, 47, "e - Esci", curses.A_BOLD)
 
-def led_on(stdscr, scelta):
-    if scelta == ord('R'):
+def led_on_off_red(stdscr, stato_red):
+    if stato_red == 0:
         stdscr.addstr(6, 7, " ", curses.color_pair(2))
         stdscr.addstr(7, 7, " ", curses.color_pair(2))
         stdscr.addstr(10, 7, "|")
-    elif scelta == ord('G'):
+        return 1
+    elif stato_red == 1:
+        stdscr.addstr(6, 7, " ", curses.color_pair(1))
+        stdscr.addstr(7, 7, " ", curses.color_pair(1))
+        stdscr.addstr(10, 7, "/")
+        return 0
+
+def led_on_off_green(stdscr, stato_green):
+    if stato_green == 0:
         stdscr.addstr(6, 13, " ", curses.color_pair(3))
         stdscr.addstr(7, 13, " ", curses.color_pair(3))
         stdscr.addstr(10, 13, "|")
-    elif scelta == ord('B'):
+        return 1
+    elif stato_green == 1:
+        stdscr.addstr(6, 13, " ", curses.color_pair(1))
+        stdscr.addstr(7, 13, " ", curses.color_pair(1))
+        stdscr.addstr(10, 13, "/")
+        return 0
+
+def led_on_off_blue(stdscr, stato_blue):
+    if stato_blue == 0:
         stdscr.addstr(6, 19, " ", curses.color_pair(4))
         stdscr.addstr(7, 19, " ", curses.color_pair(4))
         stdscr.addstr(10, 19, "|")
+        return 1
+    elif stato_blue == 1:
+        stdscr.addstr(6, 19, " ", curses.color_pair(1))
+        stdscr.addstr(7, 19, " ", curses.color_pair(1))
+        stdscr.addstr(10, 19, "/")
+        return 0
